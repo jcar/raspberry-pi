@@ -17,3 +17,5 @@ try:
         time.sleep(flash_delay)
 except KeyboardInterrupt:
     pass
+
+GPIO.cleanup()
