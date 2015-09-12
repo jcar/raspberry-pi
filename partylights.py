@@ -5,14 +5,15 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(17,GPIO.OUT)
 GPIO.setup(22,GPIO.OUT)
 
-#loop for 10 seconds
+flash_delay = .10
 
-
-t_end = time.time() + 60 * 15
-while time.time() < t_end:
-    GPIO.output(17,GPIO.HIGH)
-    GPIO.output(22,GPIO.LOW)
-    time.sleep(.25)
-    GPIO.output(17,GPIO.LOW)
-    GPIO.output(22,GPIO.HIGH)
-    time.sleep(.25)
+try:
+    while True:
+        GPIO.output(17,GPIO.HIGH)
+        GPIO.output(22,GPIO.LOW)
+        time.sleep(flash_delay)
+        GPIO.output(17,GPIO.LOW)
+        GPIO.output(22,GPIO.HIGH)
+        time.sleep(flash_delay)
+except KeyboardInterrupt:
+    pass
