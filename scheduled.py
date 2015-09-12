@@ -19,7 +19,7 @@ try:
             state = "off"
             GPIO.output(17,GPIO.LOW)
             GPIO.output(22,GPIO.LOW)
-        time.sleep(5 * 60)
+        time.sleep(5)
 except KeyboardInterrupt:
     pass
 
