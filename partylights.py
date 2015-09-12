@@ -18,7 +18,7 @@ try:
             GPIO.output(17,GPIO.LOW)
             GPIO.output(22,GPIO.HIGH)
             time.sleep(flash_delay)
-        else
+        else:
             GPIO.output(17,GPIO.LOW)
             GPIO.output(22,GPIO.LOW)
 except KeyboardInterrupt:
