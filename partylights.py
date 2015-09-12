@@ -10,7 +10,7 @@ flash_delay = .10
 
 try:
     while True:
-        intput_state = GPIO.input(21)
+        input_state = GPIO.input(21)
         if input_state == False:
             GPIO.output(17,GPIO.HIGH)
             GPIO.output(22,GPIO.LOW)
