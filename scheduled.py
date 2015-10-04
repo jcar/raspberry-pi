@@ -16,7 +16,6 @@ try:
             GPIO.output(17,GPIO.HIGH)
             GPIO.output(22,GPIO.HIGH)
         else:
-            state = "off"
             GPIO.output(17,GPIO.LOW)
             GPIO.output(22,GPIO.LOW)
         time.sleep(5)
